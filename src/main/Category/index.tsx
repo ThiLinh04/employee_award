@@ -16,7 +16,6 @@ export const Category = () => {
     }, [])
 
     const getBallotData = () => {
-        console.log("a")
         const url = 'https://676a15d4863eaa5ac0dd51c7.mockapi.io/api/list'
         fetch(url, {
             method: "GET",
@@ -28,7 +27,6 @@ export const Category = () => {
             .then((response) => response.json())
             .then((data) => {
                 setListData(data)
-                console.log(data);
             })
             .catch((error) => console.log(error));
     }
